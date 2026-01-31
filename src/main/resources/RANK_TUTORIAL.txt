@@ -1,0 +1,65 @@
+============================================================
+       ULTIMATE JOIN+ | RANK SETUP GUIDE / GUÍA DE RANGOS
+============================================================
+
+[ENGLISH]
+1. Prerequisites:
+   - Install LuckPerms (or any permission plugin).
+   - Install UltimateJoin+.
+
+2. Step-by-Step Setup (Example: "MVP" Rank):
+   a) Create the group in LuckPerms:
+      /lp creategroup mvp
+
+   b) Open UltimateJoin+ 'config.yml' and find the 'ranks:' section.
+      Add your new rank there:
+
+      ranks:
+        mvp:                   <-- Must match your LP group name (or be unique if using perms)
+          weight: 60           <-- Higher than default (0) and VIP (50)
+          permission: "uj.mvp" <-- The permission required
+          sound: "ENTITY_PLAYER_LEVELUP"
+
+   c) Give the permission to the group:
+      /lp group mvp permission set uj.mvp
+
+   d) (Optional) Add custom Join/Quit messages in 'messages_en.yml':
+      
+      rank-join-mvp:
+        - "<aqua>MVP %player_name% just joined!"
+      rank-quit-mvp: "<aqua>MVP %player_name% left."
+
+   e) Reload the plugin:
+      /uj reload
+
+------------------------------------------------------------
+
+[ESPAÑOL]
+1. Requisitos:
+   - Instalar LuckPerms (o cualquier plugin de permisos).
+   - Instalar UltimateJoin+.
+
+2. Paso a Paso (Ejemplo: Rango "MVP"):
+   a) Crea el grupo en LuckPerms:
+      /lp creategroup mvp
+
+   b) Abre 'config.yml' de UltimateJoin+ y busca la sección 'ranks:'.
+      Añade tu nuevo rango ahí:
+
+      ranks:
+        mvp:                   <-- Debe coincidir con el nombre del grupo LP
+          weight: 60           <-- Mayor que default (0) y VIP (50)
+          permission: "uj.mvp" <-- El permiso requerido
+          sound: "ENTITY_PLAYER_LEVELUP"
+
+   c) Da el permiso al grupo:
+      /lp group mvp permission set uj.mvp
+
+   d) (Opcional) Añade mensajes personalizados en 'messages_es.yml':
+      
+      rank-join-mvp:
+        - "<aqua>¡MVP %player_name% acaba de entrar!"
+      rank-quit-mvp: "<aqua>MVP %player_name% salió."
+
+   e) Recarga el plugin:
+      /uj reload

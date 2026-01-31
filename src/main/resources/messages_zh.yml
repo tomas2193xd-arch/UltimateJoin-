@@ -1,0 +1,70 @@
+prefix: "<gray>[<gradient:#00AAFF:#0055AA>UltimateJoin+</gradient>] "
+no-permission: "<red>您没有权限执行此命令。"
+reload-success: "<green>配置和语言文件已成功重新加载！"
+reload-fail: "<red>重新加载配置失败。请检查控制台。"
+
+# Features
+throttle-kick: "<red>请稍等片刻后再重新连接。"
+throttle-broadcast: "<gray>[<green>+<gray>] <yellow>%player_name%<gray> 和 <aqua><count> 其他人<gray> 已连接！"
+error-database: "<red>数据库发生错误。请联系管理员。"
+
+# Welcomer
+welcomer-start: "<green>新玩家加入了！输入 <white>welcome<green> 可获得奖励！"
+welcomer-reward: "<green>您因欢迎新玩家而获得了奖励！"
+
+# Spawn
+spawn-set: "<green>主出生点已成功设置！"
+first-spawn-set: "<green>首次加入出生点已成功设置！"
+teleport-spawn: "<yellow>正在传送至出生点..."
+
+# Maintenance
+maintenance-enabled: "<green>维护模式已 <bold>启用</bold>。"
+maintenance-disabled: "<red>维护模式已 <bold>禁用</bold>。"
+maintenance-motd: "<red>服务器目前正在维护中。<br><yellow>请稍后再试！"
+maintenance-kick: "<gradient:#FF5555:#AA0000> 维护模式 </gradient><br><br><gray>服务器正在更新中。<br><white>请关注我们的 Discord 以获取更新！"
+
+# Admin Tools
+fake-join: "<yellow>已为 %player% 模拟加入。"
+fake-join-console-error: "<red>此命令只能由玩家使用。"
+
+# Help Menu
+help-header: "<gradient:#00AAFF:#0055AA>UltimateJoin+</gradient> <gray>命令："
+help-spawn: "<gray>/spawn <dark_gray>- <white>传送至大厅"
+help-setspawn: "<gray>/setspawn <dark_gray>- <white>设置主出生点"
+help-setfirstspawn: "<gray>/setfirstspawn <dark_gray>- <white>设置首次加入出生点"
+help-maintenance: "<gray>/uj maintenance <on/off> <dark_gray>- <white>切换维护模式"
+help-reload: "<gray>/uj reload <dark_gray>- <white>重新加载插件"
+help-fakejoin: "<gray>/uj fakejoin <dark_gray>- <white>模拟加入"
+help-fakequit: "<gray>/uj fakequit <dark_gray>- <white>模拟退出"
+
+# Greetings
+greeting-morning: "<center><yellow>🌅 早上好，%player_name%！"
+greeting-night: "<center><blue>🌙 晚上好，%player_name%！月亮升起来了。"
+
+# First Join
+first-join-broadcast:
+  - "<br>"
+  - "<center><rainbow>欢迎来到服务器</rainbow>"
+  - "<center><gray>请欢迎 <aqua>%player_name%<gray> 加入社区！"
+  - "<center><gray>他是第 #%ultimatejoin_joins% 位玩家"
+  - "<br>"
+
+# Ranks
+rank-join-default:
+  - "<gray>[<green>+<gray>] <gray>%player_name%"
+rank-quit-default: "<gray>[<red>-<gray>] <gray>%player_name%"
+
+rank-join-vip:
+  - "<center><yellow>⭐ <gradient:#ffd700:#ffffff>%player_name%</gradient> <yellow>来了！ ⭐"
+  - "<center><hover:show_text:'<gold>点击打招呼！'><click:run_command:'/msg %player_name% Hi!'><gray>[打招呼]</click></hover>"
+rank-quit-vip: "<yellow>%player_name% 离开了星空。"
+
+rank-join-admin:
+  - "<br>"
+  - "<center><red><b>检测到管理员"
+  - "<center><gradient:#ff0000:#aa0000>%player_name%</gradient> <gray>已通过安全连接加入。"
+  - "<br>"
+rank-quit-admin: "<gray>[<red>-<gray>] <red>%player_name% <gray>已断开连接。"
+rank-title-admin: "<red>管理员模式"
+rank-subtitle-admin: "<gray>监控已激活"
+rank-bossbar-admin: "<red>管理员 %player_name% 已加入"

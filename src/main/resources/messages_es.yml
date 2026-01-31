@@ -1,0 +1,73 @@
+prefix: "<gray>[<gradient:#00AAFF:#0055AA>UltimateJoin+</gradient>] "
+no-permission: "<red>No tienes permiso para ejecutar este comando."
+reload-success: "<green>¡Configuración y archivos de idioma recargados correctamente!"
+reload-fail: "<red>Fallo al recargar la configuración. Revisa la consola."
+
+# Features
+throttle-kick: "<red>Por favor espera un momento antes de reconectarte."
+throttle-broadcast: "<gray>[<green>+<gray>] <yellow>%player_name%<gray> y <aqua><count> más<gray> se han conectado!"
+error-database: "<red>Ocurrió un error en la base de datos. Contacta a un administrador."
+
+# Welcomer
+welcomer-start: "<green>¡Un nuevo jugador ha entrado! Escribe <white>bienvenido<green> para ganar un premio!"
+welcomer-reward: "<green>¡Has recibido una recompensa por dar la bienvenida!"
+
+# Spawn
+spawn-set: "<green>¡Spawn principal establecido correctamente!"
+first-spawn-set: "<green>¡Spawn de primera entrada establecido correctamente!"
+teleport-spawn: "<yellow>Teletransportando al spawn..."
+
+# Mantenimiento
+maintenance-enabled: "<green>Modo mantenimiento <bold>ACTIVADO</bold>."
+maintenance-disabled: "<red>Modo mantenimiento <bold>DESACTIVADO</bold>."
+maintenance-motd: "<red>El servidor está en mantenimiento.<br><yellow>¡Vuelve más tarde!"
+maintenance-kick: "<gradient:#FF5555:#AA0000> MODO MANTENIMIENTO </gradient><br><br><gray>El servidor se está actualizando.<br><white>¡Síguenos en Discord!"
+
+# Herramientas Admin
+fake-join: "<yellow>Entrada simulada para %player%."
+fake-join-console-error: "<red>Este comando solo puede ser usado por jugadores."
+
+# Menú de Ayuda
+help-header: "<gradient:#00AAFF:#0055AA>UltimateJoin+</gradient> <gray>Comandos:"
+help-spawn: "<gray>/spawn <dark_gray>- <white>Ir al Lobby"
+help-setspawn: "<gray>/setspawn <dark_gray>- <white>Fijar Spawn Principal"
+help-setfirstspawn: "<gray>/setfirstspawn <dark_gray>- <white>Fijar Spawn de Nuevos"
+help-maintenance: "<gray>/uj maintenance <on/off> <dark_gray>- <white>Activar/Desactivar Mantenimiento"
+help-reload: "<gray>/uj reload <dark_gray>- <white>Recargar Plugin"
+help-fakejoin: "<gray>/uj fakejoin <dark_gray>- <white>Simular Entrada"
+help-fakequit: "<gray>/uj fakequit <dark_gray>- <white>Simular Salida"
+
+# Saludos (Greetings)
+greeting-morning: "<center><yellow>🌅 ¡Buenos Días, %player_name%! ¡A brillar!"
+greeting-night: "<center><blue>🌙 Buenas Noches, %player_name%! La luna está alta."
+
+# Primera Entrada (First Join)
+first-join-broadcast:
+  - "<br>"
+  - "<center><rainbow>BIENVENIDO AL SERVIDOR</rainbow>"
+  - "<center><gray>¡Demos la bienvenida a <aqua>%player_name%<gray>!"
+  - "<center><gray>Es el jugador #%ultimatejoin_joins%"
+  - "<br>"
+
+# Rangos (Mapeo por Defecto)
+# [!] Para añadir un nuevo rango (ej. "mvp"):
+# 1. Defínelo en config.yml bajo 'ranks'.
+# 2. Añade 'rank-join-mvp' y 'rank-quit-mvp' aquí abajo.
+rank-join-default:
+  - "<gray>[<green>+<gray>] <gray>%player_name%"
+rank-quit-default: "<gray>[<red>-<gray>] <gray>%player_name%"
+
+rank-join-vip:
+  - "<center><yellow>⭐ <gradient:#ffd700:#ffffff>%player_name%</gradient> <yellow>está aquí! ⭐"
+  - "<center><hover:show_text:'<gold>Clic para saludar'><click:run_command:'/msg %player_name% Hola!'><gray>[Di Hola]</click></hover>"
+rank-quit-vip: "<yellow>%player_name% dejó las estrellas."
+
+rank-join-admin:
+  - "<br>"
+  - "<center><red><b>ADMIN DETECTADO"
+  - "<center><gradient:#ff0000:#aa0000>%player_name%</gradient> <gray>entró con conexión segura."
+  - "<br>"
+rank-quit-admin: "<gray>[<red>-<gray>] <red>%player_name% <gray>se desconectó."
+rank-title-admin: "<red>MODO ADMIN"
+rank-subtitle-admin: "<gray>Vigilancia activa"
+rank-bossbar-admin: "<red>Admin %player_name% conectado"

@@ -1,0 +1,202 @@
+# -----------------------------------------------------------------------------
+#  __  __   _    _      _                    _         _
+# |  \/  | | |  | |    (_)                  | |       (_)
+# | \  / | | |__| |     _    _ __     __ _  | |_       _   ___
+# | |\/| | |  __  |    | |  | '_ \   / _` | | __|     | | / __|
+# | |  | | | |  | |    | |  | | | | | (_| | | |_      | | \__ \
+# |_|  |_| |_|  |_|    |_|  |_| |_|  \__,_|  \__|     |_| |___/
+#
+# UltimateJoin+ Configuration | Version 1.0.0
+# Author: Tomas Garcia
+# -----------------------------------------------------------------------------
+
+settings:
+  debug-mode: false
+  locale: "en" # Options: en, es, fr, de, it, pt, zh
+  throttle-window: 3
+  throttle-threshold: 5
+  # Message "throttle-broadcast" fetched from messages_xx.yml
+
+database:
+  enabled: true
+  type: "sqlite" # or "mysql"
+  host: "localhost"
+  port: "3306"
+  database: "ultimatejoin"
+  username: "root"
+  password: ""
+
+# -----------------------------------------------------------------------------
+# CUSTOM SPECIAL EFFECTS
+# Types:
+# - HELIX (DNA Style)
+# - TORNADO (Rising Spiral)
+# - WINGS (Angel Wings - Premium)
+# - HALO (Angelic Ring - Premium)
+# -----------------------------------------------------------------------------
+custom-effects:
+  enabled: true
+  type: "WINGS"
+  particle: "FLAME"
+  secondary-particle: "END_ROD"
+
+# -----------------------------------------------------------------------------
+# GLOBAL FEATURES
+# -----------------------------------------------------------------------------
+features:
+  titles: true
+  actionbar: true
+  bossbar: true
+  sounds: true
+  particles: true
+  fireworks: true
+
+  night: # 12001 - 24000
+    message: "<center><blue>🌙 Good Evening, %player_name%! The moon is high."
+
+# -----------------------------------------------------------------------------
+# EVENTS & COMMUNITY
+# -----------------------------------------------------------------------------
+events:
+  welcomer:
+    enabled: true
+    duration: 20
+    words:
+      - "welcome"
+      - "bienvenido"
+      - "hola"
+      - "hi"
+      - "wb"
+    rewards:
+      - "eco give %player% 50"
+      - "msg %player% <green>Thanks for welcoming the new player! (+50$)"
+
+# -----------------------------------------------------------------------------
+# SPAWN SETTINGS
+# -----------------------------------------------------------------------------
+spawn:
+  teleport-on-join: true
+  teleport-on-respawn: true
+  # Locations set via /setspawn and /setfirstspawn
+
+# -----------------------------------------------------------------------------
+# MAINTENANCE MODE
+# -----------------------------------------------------------------------------
+maintenance:
+  enabled: false
+  motd: "<red>Server is currently under maintenance.<br><yellow>Check back later!"
+  kick-message: "<gradient:#FF5555:#AA0000> MAINTENANCE MODE </gradient><br><br><gray>The server is currently being updated.<br><white>Follow us on Discord for updates!"
+
+# -----------------------------------------------------------------------------
+# FIRST JOIN SETTINGS
+# -----------------------------------------------------------------------------
+first-join:
+  # Teleport to first-spawn location?
+  teleport-to-spawn: true
+  # First Join Actions
+  broadcast:
+    enabled: true
+    list:
+      - "<br>"
+      - "<center><rainbow>WELCOME TO THE SERVER</rainbow>"
+      - "<center><gray>Please welcome <aqua>%player_name%<gray> to the community!"
+      - "<center><gray>They are player #%ultimatejoin_joins%"
+      - "<br>"
+  # Launch a random firework on first join?
+  firework:
+    enabled: true
+    power: 1 # 1-3
+    amount: 1
+  # Commands to run from console
+  commands:
+    enabled: true
+    list:
+      - "give %player% cookie 1"
+      - "eco give %player% 100"
+  title:
+    enable: true
+    title: "<gradient:#00ff00:#00aa00>WELCOME!</gradient>"
+    subtitle: "<gray>Enjoy your stay, %player_name%"
+    fade-in: 10
+    stay: 60
+    fade-out: 10
+  sound: "UI_TOAST_CHALLENGE_COMPLETE"
+  sound-volume: 1.0
+  sound-pitch: 1.0
+  particle: "TOTEM"
+
+# -----------------------------------------------------------------------------
+# TIME-BASED GREETINGS (Day/Night)
+# -----------------------------------------------------------------------------
+time-greetings:
+  enabled: true
+  morning: # 0 - 12000
+    message: "<center><yellow>🌅 Good Morning, %player_name%! Rise and shine!"
+  night: # 12001 - 24000
+    message: "<center><blue>🌙 Good Evening, %player_name%! The moon is high."
+
+# -----------------------------------------------------------------------------
+# RANK GROUPS (WEIGHT SYSTEM)
+# -----------------------------------------------------------------------------
+# [!] HOW TO CONFIGURE RANKS WITH LUCKPERMS [!]
+# 1. Create a group in LuckPerms (e.g. "vip").
+# 2. Add a section here with the SAME NAME (e.g. "vip:").
+# 3. Set a permission (e.g. "uj.vip") and give it to that group in LP.
+#    Command: /lp group vip permission set uj.vip
+# 4. Set a 'weight'. Higher weight = higher priority.
+#    If a player has multiple ranks, the one with highest weight is used.
+#
+# [!] HOW TO TRANSLATE RANK MESSAGES [!]
+# The messages defined here (join-message, quit-message) are defaults.
+# To translate them per language, go to 'messages_en.yml' (or es, fr...)
+# and create keys like:
+#   rank-join-vip: ...
+#   rank-quit-vip: ...
+#   rank-title-vip: ...
+# The plugin automatically looks for "rank-join-<groupname>" in the language file.
+# -----------------------------------------------------------------------------
+ranks:
+  admin:
+    weight: 100
+    permission: "uj.admin"
+    quit-message: "<gray>[<red>-<gray>] <red>%player_name% <gray>disconnected."
+    # Sound played to the player and everyone else on JOIN
+    sound: "ENTITY_ENDER_DRAGON_GROWL"
+    # Sound played on QUIT
+    quit-sound: "BLOCK_WOODEN_DOOR_CLOSE"
+
+    # [NEW] Action Bar Message
+    actionbar:
+      enabled: true
+      text: "<yellow>%player_name% joined!"
+
+    particle: "FLAME"
+    title:
+      title: "<red>ADMIN MODE"
+      subtitle: "<gray>Surveillance active"
+    bossbar:
+      text: "<red>Admin %player_name% joined"
+      color: "RED"
+      style: "SOLID"
+      progress: 1.0
+      duration: 10
+
+  vip:
+    weight: 50
+    permission: "uj.vip"
+    join-message:
+      - "<center><yellow>⭐ <gradient:#ffd700:#ffffff>%player_name%</gradient> <yellow>is here! ⭐"
+      - "<center><hover:show_text:'<gold>Click to say hi!'><click:run_command:'/msg %player_name% Hi!'><gray>[Say Hello]</click></hover>"
+    quit-message: "<yellow>%player_name% left the stars."
+    sound: "ENTITY_PLAYER_LEVELUP"
+    particle: "FIREWORKS_SPARK"
+    firework: true
+
+  default:
+    weight: 0
+    join-message:
+      - "<gray>[<green>+<gray>] <gray>%player_name%"
+    quit-message: "<gray>[<red>-<gray>] <gray>%player_name%"
+    sound: "BLOCK_NOTE_BLOCK_PLING"
+
+# Messages are now in messages_en.yml (or your selected language)

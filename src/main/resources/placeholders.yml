@@ -1,0 +1,25 @@
+## Placeholders for UltimateJoin+
+
+This file contains all the available placeholders. You need **PlaceholderAPI** installed.
+
+### Statistics Placeholders
+Use these to display player statistics stored in the database.
+
+- `%ultimatejoin_joins%`       -> Displays the total number of times the player has joined.
+- `%ultimatejoin_first_join%`  -> Displays the date/time of the player's first join.
+- `%ultimatejoin_last_join%`   -> Displays the date/time of the player's last join.
+- `%ultimatejoin_total_players%` -> Total unique players joined (Global).
+- `%ultimatejoin_is_new%`        -> "true" if it's their first time, "false" otherwise.
+- `%ultimatejoin_days_since_first%` -> Days since first join.
+- `%ultimatejoin_last_seen_ago%` -> Time since last login (e.g. "3d 2h").
+
+### Usage Examples
+**In Chat / Messages:**
+> "Welcome back %player_name%! You are player #%ultimatejoin_total_players%!"
+> "Veteran Status: %ultimatejoin_days_since_first% days."
+
+**In Scoreboards:**
+> Joins: %ultimatejoin_joins%
+
+---
+**Note**: These placeholders require Database to be enabled in config.yml (Default: SQLite).

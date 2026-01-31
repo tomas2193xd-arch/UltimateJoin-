@@ -1,0 +1,46 @@
+name: UltimateJoinPlus
+version: "${project.version}"
+main: dev.tomasgarcia.ultimatejoinplus.UltimateJoinPlus
+api-version: "1.13"
+prefix: UJ+
+authors: [Tomas Garcia]
+description: The most advanced welcome plugin on the market.
+website: https://tomasgarcia.dev
+
+softdepend: [LuckPerms, PlaceholderAPI]
+
+commands:
+  uj:
+    description: Main command for UltimateJoin+
+    aliases: [ultimatejoin, ujp]
+    permission: uj.admin
+    permission-message: "§cYou do not have permission."
+  spawn:
+    description: Teleport to spawn
+    permission: uj.spawn
+    usage: /spawn
+  setspawn:
+    description: Set main spawn
+    permission: uj.setspawn
+    usage: /setspawn
+  setfirstspawn:
+    description: Set first join spawn
+    permission: uj.setspawn
+    usage: /setfirstspawn
+
+permissions:
+  uj.admin:
+    description: Admin access
+    default: op
+  uj.spawn:
+    description: Use spawn
+    default: true
+  uj.setspawn:
+    description: Set spawns
+    default: op
+  uj.maintenance:
+    description: Toggle maintenance
+    default: op
+  uj.bypass:
+    description: Bypass maintenance
+    default: op
