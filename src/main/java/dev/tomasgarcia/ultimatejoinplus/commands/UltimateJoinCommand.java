@@ -1,3 +1,8 @@
+/*
+ *  UltimateJoin+ - The most advanced welcome plugin.
+ *  Copyright (c) 2026 Tomas Garcia
+ *  All Rights Reserved.
+ */
 package dev.tomasgarcia.ultimatejoinplus.commands;
 
 import dev.tomasgarcia.ultimatejoinplus.UltimateJoinPlus;

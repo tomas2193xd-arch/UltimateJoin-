@@ -1,3 +1,8 @@
+/*
+ *  UltimateJoin+ - The most advanced welcome plugin.
+ *  Copyright (c) 2026 Tomas Garcia
+ *  All Rights Reserved.
+ */
 package dev.tomasgarcia.ultimatejoinplus;
 
 import dev.tomasgarcia.ultimatejoinplus.commands.UltimateJoinCommand;
@@ -36,6 +41,7 @@ public class UltimateJoinPlus extends JavaPlugin {
                 this.adventure = BukkitAudiences.create(this);
 
                 printStartupBanner();
+                logger.info("Copyright (c) 2026 Tomas Garcia - All Rights Reserved.");
 
                 // 1. Initialize Managers
                 logger.info("[UJ+] > Loading modules...");
